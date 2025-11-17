@@ -5,6 +5,13 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("/img/banner_background.png");
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 header {
@@ -13,25 +20,40 @@ header {
     text-align: center;
 }
 
-/* Style the topnav */
+/* Style the topnav inkl. img*/
 ul.topnav {
     display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
     background-color: #333333;
+    background-image: url("/img/banner.png");
+    background-color: #cccccc;
+    height: 220px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 /* Style links in topnav */
 ul.topnav li a {
     display: block;
-    color: #f1f1f1;
+    color: rgb(27, 114, 70);
     padding: 14px 16px;
     text-decoration: none;
+    top: 50%;
+    font-weight: bold;
+    font-size: 25px;
+
 }
 
 /* Change color on hover */
 ul.topnav li a:hover {
-    background-color: #dddddd;
+    background-color: rgba(205, 196, 234, 0.3);
     color: black;
+}
+
+section {
+    padding: 14px 16px;
 }
