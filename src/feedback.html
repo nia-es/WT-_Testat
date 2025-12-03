@@ -5,11 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
+    <nav>
+        <ul class="topnav">
+            <li><a href="index.html">News</a></li>
+            <li><a href="aboutme.html">Über mich</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h1>Feedback</h1>
+        <h4>Ich freue mich über jedliche Art von Feedback, denn nur so können wir Menschen uns verbessern.</h4>
+        <form action="#" method="post">
+            <label for="firstname">Vorname:</label>
+            <input type="text" id="firstname" name="firstname" placeholder="Ihr Vorname" required> <sup>*</sup>
+            <label for="lastname"> Nachname:</label>
+            <input type="text" id="lastname" name="lastname" placeholder="Ihr Nachname" required> <sup>*</sup>
+            <label for="email"> E-Mail: </label>
+            <input type="email" id="email" name="email" placeholder="Ihre Mailadresse" required>
+            <input type="hidden" id="custId" name="custId" value="3487">
+            <sup>*</sup>
+            <p><strong>Info:</strong> E-Mail wird nicht öffentlich angezeigt.
+            </p>
+            <h5>Ihre Rückmeldung:</h5>
+            <textarea name="feedback" id="feedback" cols="115" rows="15"
+                placeholder="Hier kommt Ihr Feedback hin"></textarea>
 
+            <p>Wünschen Sie eine Rückmeldung</p>
+            <label for="yes">
+                Ja
+                <input type="radio" id="yes" value="yes" name="yes">
+            </label>
+            <label for="no">
+                Nein
+                <input type="radio" id="no" value="no" name="no">
+            </label>
+            <br>
+            <br><label><button type="submit">Senden</button></label>
+            <input type="reset" value="Abbrechen">
+        </form>
+    </section>
 </body>
+
 
 </html>
