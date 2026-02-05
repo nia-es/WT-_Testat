@@ -16,6 +16,7 @@ body {
     /* Vertikal wiederholen */
     background-size: 100% auto;
     /* Breite 100%, Höhe automatisch */
+    min-width: 500px;
 }
 
 header {
@@ -90,6 +91,23 @@ h3 {
 
 .news-vorschau:hover h2 {
     color: rgb(27, 117, 70);
+}
+
+.button-news {
+    color: rgb(255, 125, 70);
+    padding: 8px 16px;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 2px;
+    border-radius: 15px;
+    background-image: linear-gradient(90deg, #cdffd8, #94b9ff);
+    background-size: cover;
+    border-style: hidden;
+}
+
+.button-news:hover {
+    background-image: linear-gradient(90deg, #94b9ff, #cdffd8);
+    font-style: italic;
 }
 
 section a,
@@ -208,12 +226,12 @@ h5 {
 
 .FB-Contactinfos {
     display: grid;
-    grid-template-columns: 1fr 140px 20px 1fr 140px 20px 1fr 240px 20px;
+    grid-template-columns: 1fr 140px 20px 1fr 140px 20px 1fr 260px 20px;
     gap: 1px 1px;
     /*background-color: rgba(255, 255, 255, 0.7);*/
     padding: 10px 1px;
     margin-bottom: 30px;
-    width: 800px;
+    width: 820px;
     /*box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2),
         0 10px 20px rgba(0, 0, 0, 0.2);*/
 }
@@ -230,12 +248,17 @@ h5 {
 .FB-Text textarea,
 .FB-Contactinfos input {
     background-color: rgba(255, 255, 255, 0.7);
-    border: 2px solid rgb(27, 114, 70);
+    border: 1px solid rgb(27, 114, 70);
     border-radius: 7px;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2),
         0 10px 20px rgba(0, 0, 0, 0.2);
     resize: none;
     /* Damit Text-Feld nicht manuell angepasst werden kann*/
+}
+
+.FB-Text textarea:hover,
+.FB-Contactinfos input:hover {
+    border: 1px solid rgb(255, 125, 70);
 }
 
 .FB-Antwort {
@@ -262,6 +285,38 @@ h5 {
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2),
         0 10px 20px rgba(0, 0, 0, 0.2);
     border: 2px solid rgb(27, 114, 70);
+}
+
+.FB-Antwort input:hover {
+    border: 2px solid rgb(255, 125, 70);
+}
+
+.impress {
+    width: 250px;
+    padding: 15px 15px 15px 0;
+    border-radius: 25px;
+    background-image: linear-gradient(90deg, #cdffd8, #94b9ff);
+    /* Farbverlauf Aufgabe 1.6*/
+    background-size: cover;
+}
+
+blockquote {
+    font-style: italic;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 40px;
+    margin-right: 40px;
+    /* Default CSS Settings gem. w3schools*/
+}
+
+#quote {
+    font-size: x-large;
+    color: #304365;
+}
+
+cite {
+    font-size: small;
 }
 
 /* alt
