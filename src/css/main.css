@@ -1,3 +1,11 @@
+/* Import restliche css-Dateien
+IMMER an oberster Stelle!! */
+@import url(cv.css);
+@import url(feedback.css);
+@import url(impressum.css);
+@import url(menu.css);
+@import url(polaroid-wrapper.css);
+
 * {
     box-sizing: border-box;
 }
@@ -19,56 +27,15 @@ body {
     min-width: 500px;
 }
 
-header {
-    background-color: #f1f1f1;
-    padding: 10px;
-    text-align: center;
-}
-
-/*Navigation bzw. Menu*/
-ul.topnav {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    /*background-color: #333333;*/
-    background-image: url("/img/banner.png");
-    background-color: #cccccc;
-    height: 220px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: fixed;
-    /* Damit Navigation fixiert ist! */
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    min-width: 800px;
-
-}
-
-/* Style links in topnav */
-ul.topnav li a {
-    display: block;
-    color: rgb(27, 114, 70);
-    padding: 14px 16px;
-    text-decoration: none;
-    top: 50%;
-    font-weight: bold;
-    font-size: 25px;
-
-}
-
-ul.topnav li a:hover {
-    background-color: rgba(205, 196, 234, 0.3);
-    color: black;
-}
-
+/* Inhaltsbereich / Seiteninhalt */
 section {
     padding: 0.9em 1em;
-    width: 97%;
-    margin: 20px auto;
+    width: 1100px
+        /*97%*/
+    ;
+    margin:
+        /*20px*/
+        auto;
 }
 
 h3 {
@@ -85,6 +52,31 @@ h3 {
 }
 
 /* News-Seite*/
+
+.news-vorschau {
+    width: 20em;
+    min-height: 15em;
+    margin: 10px;
+    /* überschreibt margin: auto von section */
+    border: 2px solid rgb(27, 117, 70, 50%);
+    border-radius: 15px;
+    float: left;
+}
+
+.news-vorschau:hover {
+    border: 2px solid rgb(27, 117, 70);
+}
+
+.news-vorschau h2 {
+    padding-bottom: 5px;
+    margin: 10px 0 10px;
+}
+
+.news-vorschau p {
+    padding-bottom: 10px;
+    margin: 10px 0 10px;
+}
+
 .news-vorschau:hover p {
     font-style: italic;
 }
@@ -94,11 +86,11 @@ h3 {
 }
 
 .button-news {
-    color: rgb(255, 125, 70);
-    padding: 8px 16px;
+    color: rgb(205, 87, 50);
+    padding: 10px 40px;
     text-align: center;
     display: inline-block;
-    margin: 4px 2px;
+    margin: 30px 0 5px;
     border-radius: 15px;
     background-image: linear-gradient(90deg, #cdffd8, #94b9ff);
     background-size: cover;
@@ -108,6 +100,8 @@ h3 {
 .button-news:hover {
     background-image: linear-gradient(90deg, #94b9ff, #cdffd8);
     font-style: italic;
+    font-weight: bold;
+    cursor: url("/img/cursor_V1.png"), auto;
 }
 
 section a,
@@ -141,165 +135,6 @@ section a:active {
     border: 2px solid rgb(27, 117, 70);
 }
 
-/* Bilder à la Polaroid*/
-.polaroid-wrapper {
-    display: flex;
-    /* Flexbox-Layout*/
-    gap: 20px;
-    justify-content: center;
-    /* Zentriert Bilder in der Mitte des Containers */
-    flex-wrap: wrap;
-    /* Damit Bilder untereinander, wenn Browser-Fenster verkleinert wird (resposive)*/
-}
-
-.polaroid {
-    width: 330px;
-    height: 520px;
-    /* Grösser der Bilder bzw. Polaroid, damit alle gleich gross sind */
-    background-color: white;
-    /* Hintergrund des Polaroid */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2),
-        0 10px 20px rgba(0, 0, 0, 0.19);
-    display: flex;
-    flex-direction: column;
-    /* Damit Text unterhalb des Bildes erscheint*/
-    overflow: hidden;
-}
-
-.polaroid:hover {
-    border: 2px solid rgb(27, 117, 70);
-}
-
-.polaroid img {
-    width: 100%;
-    height: 87%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
-
-.polaroid .container {
-    height: 13%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: small;
-}
-
-/* Lebenslauf*/
-.CV {
-    display: grid;
-    grid-template-columns: 200px 200px 175px;
-    gap: 1px 10px;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 1px 2px;
-    margin-bottom: 30px;
-    width: 600px;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2),
-        0 10px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-}
-
-.CV div {
-    padding: 10px 10px;
-    border-bottom: 1px solid #f0f0f0;
-    margin-left: 7px;
-    margin-right: 7px;
-}
-
-.CV .cv-header {
-    font-weight: bold;
-    color: rgb(27, 114, 70);
-    border-bottom: 2px solid rgb(27, 114, 70);
-    padding: 14px 10px;
-    margin: 0 7px;
-}
-
-/* Feedback*/
-form,
-h5 {
-    margin-bottom: 10px;
-}
-
-.FB-Contactinfos {
-    display: grid;
-    grid-template-columns: 1fr 140px 20px 1fr 140px 20px 1fr 260px 20px;
-    gap: 1px 1px;
-    /*background-color: rgba(255, 255, 255, 0.7);*/
-    padding: 10px 1px;
-    margin-bottom: 30px;
-    width: 820px;
-    /*box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2),
-        0 10px 20px rgba(0, 0, 0, 0.2);*/
-}
-
-.FB-Text {
-    display: grid;
-    grid-template-columns: 800px;
-    gap: 1px 1px;
-    padding: 10px 1px;
-    margin-bottom: 30px;
-    width: 800px;
-}
-
-.FB-Text textarea,
-.FB-Contactinfos input {
-    background-color: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgb(27, 114, 70);
-    border-radius: 7px;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2),
-        0 10px 20px rgba(0, 0, 0, 0.2);
-    resize: none;
-    /* Damit Text-Feld nicht manuell angepasst werden kann*/
-}
-
-.FB-Text textarea:hover,
-.FB-Contactinfos input:hover {
-    border: 1px solid rgb(255, 125, 70);
-}
-
-.FB-Antwort {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 30px;
-    width: 400px;
-}
-
-.FB-Antwort label:first-child {
-    margin-left: 20px;
-}
-
-.FB-Antwort label:last-of-type {
-    margin-left: -100px;
-}
-
-.FB-Antwort input[type="submit"],
-.FB-Antwort input[type="reset"] {
-    margin-top: 30px;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 7px;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2),
-        0 10px 20px rgba(0, 0, 0, 0.2);
-    border: 2px solid rgb(27, 114, 70);
-}
-
-.FB-Antwort input:hover {
-    border: 2px solid rgb(255, 125, 70);
-}
-
-.impress {
-    width: 250px;
-    padding: 15px 15px 15px 0;
-    border-radius: 25px;
-    background-image: linear-gradient(90deg, #cdffd8, #94b9ff);
-    /* Farbverlauf Aufgabe 1.6*/
-    background-size: cover;
-}
-
 blockquote {
     font-style: italic;
     display: block;
@@ -319,7 +154,49 @@ cite {
     font-size: small;
 }
 
-/* alt
+/* Focus gem. Aufgabe Testat 1.6*/
+a:focus,
+button:focus,
+input:focus {
+    outline: 2px solid rgb(255, 125, 70);
+    filter: invert(1);
+    /* 1 = Damit Hintergrundfarbe umgekehrt angezeigt wird.
+    0.5 = grau (50% invertiert)
+    0 = keine Änderung*/
+}
+
+/* Skip-Link gem. Aufgabe 1.6 
+.skip-link {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    color: rgb(255, 125, 70);
+    font-size: small;
+    font-family: 'Mulish', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 15px;
+    background-image: linear-gradient(90deg, #cdffd8, #94b9ff);
+    z-index: 101;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* 
+====================================
+==alte Codes von älteren Aufgaben ==
+====================================
+
+/*header {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+}
 .cv-wrapper {
     display: flex;
     gap: 30px;

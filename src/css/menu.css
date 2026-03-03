@@ -1,0 +1,69 @@
+/*Navigation bzw. Menu*/
+
+
+ul.topnav {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /*background-color: #333333;*/
+    background-image: url("/img/banner.png");
+    background-color: #cccccc;
+    height: 220px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    /* Damit Navigation fixiert ist! */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    min-width: 400px;
+}
+
+/* Style links in topnav */
+ul.topnav li a {
+    display: block;
+    color: rgb(27, 114, 70);
+    padding: 14px 16px;
+    text-decoration: none;
+    top: 50%;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+ul.topnav li a:hover {
+    background-color: rgba(205, 196, 234, 0.3);
+    color: black;
+    cursor: url("/img/cursor_V1.png"), auto;
+}
+
+/* Container gem. Aufgabe 1.7*/
+.container-menu {
+    margin: auto;
+    /* Damit Boxen/Content zentriert sind */
+    max-width: 65em;
+    min-height: 35em;
+    /*Höhe muss definiert werden*/
+
+    /*display: flex;*/
+    /*Flexbox für Klasse 'container' erstellen*/
+    /* flex-wrap: wrap;
+    flex-direction: row;*/
+    /*Ausgabe nebeneinander oder untereinander
+    (mit column oder column-reverse)*/
+    /* justify-content: center;*/
+    /*Einstellung ist relativ. flex-direction ist zu beachten!
+    Ausgabe rechtsbündig (flex-start), linksbündig (flex-end),
+    space-between (Platz zwischen boxen), etc.
+    => Richtet Elemente entlang der Hauptachse aus.
+    Werte: flex-start | flex-end | center | space-between |
+     space-around | space-evenly
+    */
+    /* align-items: flex-start; */
+    /* align-items: Richtet Elemente entlang der Querachse (senkrecht) aus.
+       Werte: flex-start | flex-end | center | stretch | baseline */
+
+    overflow: hidden;
+}

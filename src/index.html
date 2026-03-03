@@ -3,12 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Für Responsive Web Design -->
     <title>It's me - Nia</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <!-- Im main.css sind alle andere CSS eingebunden (mittels @import) -->
 </head>
 
 <body>
+    <!-- Skip-Link gem. Aufgabe 1.6 
+    <a href="#main-content" class="skip-link">Skip to Read more!</a> 
+    Auskommentiert, da es nicht wirklich Sinn macht. -->
+
     <!-- Oberer Balken als "nav"-Tag-->
     <nav>
         <ul class="topnav">
@@ -19,30 +26,58 @@
         </ul>
     </nav>
 
-    <section class="news-vorschau"><!-- Auswahlbereich -->
-        <h2>Testat-Update: Mein Blog entsteht</h2> <!--Artikel 1-->
-        <p>Die letzten Wochen waren intensiv! Von der ersten HTML-Struktur über CSS-Styling bis ... <br>
-            <!--<a href="Artikel/artikel1.html">Read more</a> - ältere Aufgabe - neu Buttons! -->
-            <button class="button-news" onclick="window.open('Artikel/artikel1.html', '_blak')"> Read more</button>
-        </p>
-    </section>
+    <main id="main-content">
+        <div class="container-menu">
+            <section class="news-vorschau"><!-- Auswahlbereich -->
+                <h2>Testat-Update: Mein Blog entsteht</h2> <!--Artikel 1-->
+                <p>Die letzten Wochen waren intensiv! Von der ersten HTML-Struktur über CSS-Styling bis ... <br>
+                    <!--<a href="Artikel/artikel1.html">Read more</a> - ältere Aufgabe - neu Buttons! -->
+                    <button class="button-news" onclick="window.location.href='Artikel/artikel1.html'">Read
+                        more</button>
+                </p>
+            </section>
 
-    <section class="news-vorschau"> <!-- Auswahlbereich -->
-        <h2>Widerstand durch Stillstand</h2>
-        <p>Beim Lesen eines Artikels auf daslamm.ch über den Generalstreik in Minneapolis ... <br>
-            <!--<a href="Artikel/artikel2.html">Read more</a>-->
-            <button class="button-news" onclick="window.open('Artikel/artikel2.html', '_blak')"> Read more</button>
-        </p>
-    </section>
+            <section class="news-vorschau"> <!-- Auswahlbereich -->
+                <h2>Widerstand durch Stillstand</h2>
+                <p>Beim Lesen eines Artikels auf www.daslamm.ch über den Generalstreik in Minneapolis ... <br>
+                    <!--<a href="Artikel/artikel2.html">Read more</a>-->
+                    <button class="button-news" onclick="window.location.href='Artikel/artikel2.html'">Read
+                        more</button>
+                </p>
+            </section>
 
-    <section class="news-vorschau"> <!-- Auswahlbereich -->
-        <h2>Artikel 3</h2>
-        <p>Lorem, consectetur adipisicing elit. Atque soluta hic ullam sit odio ...<br>
-            <!--<a href="Artikel/artikel3.html"> Read more</a>-->
-            <button class="button-news" onclick="window.open('Artikel/artikel3.html', '_blak')"> Read more</button>
-        </p>
-    </section>
+            <section class="news-vorschau"> <!-- Auswahlbereich -->
+                <h2>Lorem Ipsum test-Artikel Mira Tira</h2>
+                <p>Lorem, consectetur adipisicing elit New Site Atque soluta hic ullam sit odio totam tempore quia
+                    ...<br>
+                    <!--<a href="Artikel/artikel3.html"> Read more</a>-->
+                    <button class="button-news" onclick="window.open('Artikel/artikel3.html', '_blank')">Read
+                        more</button>
+                </p>
+            </section>
 
+            <section class="news-vorschau"> <!-- Auswahlbereich -->
+                <h2>Artikel Republik-Magazin</h2>
+                <p>Es gibt Bücher, die einen schon auf der ersten Seite abholen: Man hört sofort die Stimme, spürt den
+                    Klang, ...<br>
+                    <!--<a href="Artikel/artikel3.html"> Read more</a>-->
+                    <button class="button-news" onclick="window.location.href='Artikel/artikel4.html'">Read
+                        more</button>
+                </p>
+            </section>
+
+            <section class="news-vorschau"> <!-- Auswahlbereich -->
+                <h2>Die erste Nostalgiewelle der Gen Z</h2>
+                <p>2026 fühlt sich plötzlich an wie ein Déjà-vu von 2016 Die Gen Z ist inzwischen alt genug für ihre
+                    erste ...<br>
+                    <!--<a href="Artikel/artikel3.html"> Read more</a>-->
+                    <button class="button-news" onclick="window.location.href='Artikel/artikel5.html'">Read
+                        more</button>
+                </p>
+            </section>
+
+        </div>
+    </main>
     <!--
     <aside>Seitenbereich</aside>
     <footer>Fussbereich</footer>
