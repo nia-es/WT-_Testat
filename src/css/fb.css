@@ -1,0 +1,82 @@
+@media (max-width: 546.6666666667px) {
+  .FB-breite {
+    max-width: 100%;
+  }
+}
+form,
+h5 {
+  margin-bottom: 10px;
+}
+
+.FB-Contactinfos {
+  display: grid;
+  grid-template-columns: 1fr 140px 20px 1fr 140px 20px 1fr 260px 20px;
+  gap: 1px 1px;
+  padding: 10px 1px;
+  margin-bottom: 30px;
+  width: 820px;
+}
+
+.FB-Text {
+  display: grid;
+  grid-template-columns: 800px;
+  gap: 1px 1px;
+  padding: 10px 1px;
+  margin-bottom: 30px;
+  width: 800px;
+}
+
+.FB-Text textarea,
+.FB-Contactinfos input {
+  border-radius: 7px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgb(27, 114, 70);
+  /*border-radius: variable.$marg-bott;*/
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2), 0 10px 20px rgba(0, 0, 0, 0.2);
+  resize: none;
+}
+
+.FB-Text textarea:hover,
+.FB-Contactinfos input:hover {
+  border: 1px solid rgb(255, 125, 70);
+}
+
+.FB-Antwort {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 30px;
+  width: 400px;
+}
+
+.FB-Antwort label:first-child {
+  margin-left: 20px;
+}
+
+.FB-Antwort label:last-of-type {
+  margin-left: -100px;
+}
+
+.FB-Antwort input[type=submit],
+.FB-Antwort input[type=reset] {
+  margin-top: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 7px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2), 0 10px 20px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgb(27, 114, 70);
+  cursor: url("/img/cursor_V1.png"), auto;
+  -webkit-appearance: none;
+  color: rgb(27, 114, 70);
+}
+
+.FB-Antwort input:hover {
+  border: 2px solid rgb(255, 125, 70);
+}
+
+.FB-breite {
+  max-width: 820px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+/*# sourceMappingURL=fb.css.map */

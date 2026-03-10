@@ -1,19 +1,35 @@
-/* Feedback*/
+// Feedback
+@use 'variable';
+@use 'sass:math';
+
+@mixin marg ($stand-radius: 7px) {
+    border-radius: $stand-radius;
+}
+
+@mixin col {
+    border: variable.$default-col;
+}
+
+// Wenn Bildschirm schmaler als 546px (= 820 / 1.5), volle Breite verwenden
+// math.div() = SASS-Operation, berechnet den Breakpoint automatisch.
+@media (max-width: math.div(variable.$default-breite, 1.5)) {
+    .FB-breite {
+        max-width: 100%;
+    }
+}
+
 form,
 h5 {
-    margin-bottom: 10px;
+    margin-bottom: variable.$marg-bott;
 }
 
 .FB-Contactinfos {
     display: grid;
     grid-template-columns: 1fr 140px 20px 1fr 140px 20px 1fr 260px 20px;
     gap: 1px 1px;
-    /*background-color: rgba(255, 255, 255, 0.7);*/
     padding: 10px 1px;
     margin-bottom: 30px;
     width: 820px;
-    /*box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2),
-        0 10px 20px rgba(0, 0, 0, 0.2);*/
 }
 
 .FB-Text {
@@ -27,13 +43,13 @@ h5 {
 
 .FB-Text textarea,
 .FB-Contactinfos input {
+    @include marg;
     background-color: rgba(255, 255, 255, 0.7);
     border: 1px solid rgb(27, 114, 70);
-    border-radius: 7px;
+    /*border-radius: variable.$marg-bott;*/
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2),
         0 10px 20px rgba(0, 0, 0, 0.2);
     resize: none;
-    /* Damit Text-Feld nicht manuell angepasst werden kann*/
 }
 
 .FB-Text textarea:hover,
@@ -59,12 +75,12 @@ h5 {
 
 .FB-Antwort input[type="submit"],
 .FB-Antwort input[type="reset"] {
-    margin-top: 10px;
+    margin-top: variable.$marg-bott;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 7px;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2),
         0 10px 20px rgba(0, 0, 0, 0.2);
-    border: 2px solid rgb(27, 114, 70);
+    @include col;
     cursor: url("/img/cursor_V1.png"), auto;
     -webkit-appearance: none;
     color: rgb(27, 114, 70);

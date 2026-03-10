@@ -1,0 +1,107 @@
+/* 
+    === Media-Queries nur im main.css einebunden ===
+    ================================================
+*/
+
+/* === Tablet (max. 900px) === */
+@media (max-width: 900px) {
+    .news-vorschau {
+        width: 45%;
+        /* 2 Spalten statt 3 */
+        justify-content: center;
+    }
+
+    ul.topnav li a {
+        font-size: 25px;
+        /* Schrift etwas kleiner für Tablet */
+        padding: 10px 12px;
+        /* Weniger Padding */
+    }
+
+    ul.topnav {
+        height: 200px;
+        /* Nav kleiner auf Mobile */
+    }
+
+    body {
+        padding-top: 200px;
+        /* Muss zur neuen Nav-Höhe passen! */
+    }
+}
+
+/* === iPhone (max. 600px) === */
+@media (max-width: 600px) {
+    body {
+        min-width: unset;
+    }
+
+    .news-vorschau {
+        width: 100%;
+        /* 1 Spalte */
+    }
+
+    ul.topnav {
+        height: 180px;
+        /* Nav kleiner auf Mobile */
+        justify-content: center;
+    }
+
+    ul.topnav li a {
+        font-size: 20px;
+        /* Noch kleinere Schrift für Phone */
+        padding: 6px 8px;
+        /* Minimales Padding damit alle 4 Links passen */
+    }
+
+    body {
+        padding-top: 180px;
+        /* Muss zur neuen Nav-Höhe passen! */
+    }
+
+    .main-content {
+        font-size: smaller;
+    }
+
+    .news-vorschau:last-child {
+        margin-bottom: 30px;
+    }
+
+    .FB-Contactinfos {
+        grid-template-columns: [info] 1fr [eingabe] 4fr [stern] 0.5fr !important;
+        grid-template-areas:
+            "info eingabe stern"
+        ;
+        width: 100% !important;
+        gap: 20px 10px !important;
+    }
+
+    .FB-Contactinfos label {
+        grid-column: info;
+    }
+
+    .FB-Contactinfos input {
+        grid-column: eingabe;
+        width: 100%;
+    }
+
+    .FB-Contactinfos sup {
+        grid-column: stern;
+    }
+
+    .FB-Text {
+        width: 50% !important;
+        grid-template-columns: 50%;
+    }
+
+    .FB-Text textarea {
+        width: 50%;
+    }
+
+    .CV {
+        font-size: smaller !important;
+        margin: 0 5px !important;
+        gap: 1px 2px !important;
+        width: 100% !important;
+        grid-template-columns: [employer] 1fr [role] 1.5fr [duration] 1fr [end] !important;
+    }
+}

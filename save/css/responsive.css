@@ -1,0 +1,77 @@
+/* 
+    === Media-Queries nur im main.css einebunden ===
+    ================================================
+*/
+
+/* === Tablet (max. 900px) === */
+@media (max-width: 900px) {
+    .news-vorschau {
+        width: 45%;
+        /* 2 Spalten statt 3 */
+        justify-content: center;
+    }
+
+    ul.topnav li a {
+        font-size: 25px;
+        /* Schrift etwas kleiner für Tablet */
+        padding: 10px 12px;
+        /* Weniger Padding */
+    }
+
+    ul.topnav {
+        height: 200px;
+        /* Nav kleiner auf Mobile */
+    }
+
+    body {
+        padding-top: 200px;
+        /* Muss zur neuen Nav-Höhe passen! */
+    }
+}
+
+/* === iPhone (max. 600px) === */
+@media (max-width: 600px) {
+    body {
+        min-width: unset;
+    }
+
+    .news-vorschau {
+        width: 100%;
+        /* 1 Spalte */
+    }
+
+    ul.topnav {
+        height: 180px;
+        /* Nav kleiner auf Mobile */
+    }
+
+    ul.topnav li a {
+        font-size: 20px;
+        /* Noch kleinere Schrift für Phone */
+        padding: 6px 8px;
+        /* Minimales Padding damit alle 4 Links passen */
+    }
+
+    body {
+        padding-top: 180px;
+        /* Muss zur neuen Nav-Höhe passen! */
+    }
+
+    .main-content {
+        font-size: smaller;
+    }
+
+    .news-vorschau:last-child {
+        margin-bottom: 30px;
+    }
+
+    .FB-Contactinfos,
+    .FB-Text {
+        width: 50%;
+        grid-template-columns: 50%;
+    }
+
+    .FB-Text textarea {
+        width: 380px;
+    }
+}

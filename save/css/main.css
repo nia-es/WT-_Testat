@@ -1,8 +1,7 @@
 /* Import restliche css-Dateien
 IMMER an oberster Stelle!! */
 @import url(cv.css);
-/* @import url(feedback.css); */
-/* feedback.css -->auskommentiert, da mit scss gearbeitet wird */
+@import url(feedback.css);
 @import url(impressum.css);
 @import url(menu.css);
 @import url(polaroid-wrapper.css);
@@ -12,6 +11,9 @@ IMMER an oberster Stelle!! */
     box-sizing: border-box;
 }
 
+html {
+    background-image: linear-gradient(90deg, #cdffd8, #94b9ff);
+}
 
 body {
     margin: 0;
@@ -23,15 +25,12 @@ body {
     /*background-image: url("/img/banner_background.png");*/
     background-color: #cdffd8;
     background-image: linear-gradient(90deg, #cdffd8, #94b9ff);
-    background-attachment: fixed;
     background-position: center top;
-    background-repeat: no-repeat;
-    /* Vertikal wiederholen sich im standard
-        --> deshalb auf no repeat*/
-    background-size: 100% 100%;
+    background-repeat: repeat-y;
+    /* Vertikal wiederholen */
+    background-size: 100% auto;
     /* Breite 100%, Höhe automatisch */
     /*min-width: 500px;*/
-    height: 100vh;
 }
 
 /* Inhaltsbereich / Seiteninhalt */

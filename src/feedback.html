@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no, date=no, address=no">
     <title>Feedback</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/fb.css">
 </head>
 
 <body>
@@ -30,19 +32,8 @@
             <input type="text" id="lastname" name="lastname" placeholder="Ihr Nachname" required> <sup>*</sup>
             <label for="email"> E-Mail: </label>
             <input type="email" id="email" name="email" placeholder="Ihre Mailadresse" required> <sup>*</sup>
-
         </div>
-        <!-- altes Formular
-        <form action="#" method="post">
-            <label for="firstname">Vorname:</label>
-            <input type="text" id="firstname" name="firstname" placeholder="Ihr Vorname" required> <sup>*</sup>
-            <label for="lastname"> Nachname:</label>
-            <input type="text" id="lastname" name="lastname" placeholder="Ihr Nachname" required> <sup>*</sup>
-            <label for="email"> E-Mail: </label>
-            <input type="email" id="email" name="email" placeholder="Ihre Mailadresse" required>
-            <input type="hidden" id="custId" name="custId" value="3487">
-            <sup>*</sup>
-            -->
+
         <p class="FB-breite"><strong>Info:</strong> E-Mail wird nicht öffentlich angezeigt.
         </p>
         <h5 class="FB-breite">Ihre Rückmeldung:</h5>
@@ -50,10 +41,7 @@
             <textarea name="feedback" id="feedback" cols="115" rows="15"
                 placeholder="Hier kommt dein Feedback hin..."></textarea> <!-- Gem. Kapitel 1.4-->
         </div>
-        <!-- <textarea name="feedback" id="feedback" cols="115" rows="15"
-            placeholder="Hier kommt Ihr Feedback hin"></textarea> // -> vor Kapitel -->
         <p class="FB-breite">Wünschen Sie eine Rückmeldung?</p>
-
         <div class="FB-Antwort">
             <label for="yes">
                 Ja
@@ -63,16 +51,6 @@
                 Nein
                 <input type="radio" id="no" value="no" name="answer">
             </label>
-            <!--   <label for="yes">
-            Jaaa
-            <input type="radio" id="yes" value="yes" name="yes">
-        </label>
-        <label for="no">
-            Neinnn
-            <input type="radio" id="no" value="no" name="no">
-            <br>
-            </label>-->
-            <!--<label><button type="submit">Senden</button></label>-->
             <input type="submit" value="Senden">
             <input type="reset" value="Abbrechen">
             <!--Beide Buttons als input-Type-->
@@ -80,5 +58,34 @@
     </section>
 </body>
 
-
 </html>
+
+<!-- 
+ALTE CODES
+
+ altes Formular
+        <form action="#" method="post">
+            <label for="firstname">Vorname:</label>
+            <input type="text" id="firstname" name="firstname" placeholder="Ihr Vorname" required> <sup>*</sup>
+            <label for="lastname"> Nachname:</label>
+            <input type="text" id="lastname" name="lastname" placeholder="Ihr Nachname" required> <sup>*</sup>
+            <label for="email"> E-Mail: </label>
+            <input type="email" id="email" name="email" placeholder="Ihre Mailadresse" required>
+            <input type="hidden" id="custId" name="custId" value="3487">
+            <sup>*</sup>
+            
+            <textarea name="feedback" id="feedback" cols="115" rows="15"
+            placeholder="Hier kommt Ihr Feedback hin"></textarea> // -> vor Kapitel 
+
+        <label for="yes">
+            Jaaa
+            <input type="radio" id="yes" value="yes" name="yes">
+        </label>
+        <label for="no">
+            Neinnn
+            <input type="radio" id="no" value="no" name="no">
+            <br>
+        </label>
+
+        <label><button type="submit">Senden</button></label>
+        -->
