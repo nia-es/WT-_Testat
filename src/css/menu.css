@@ -7,7 +7,7 @@ ul.topnav {
     margin: 0;
     padding: 0;
     /*background-color: #333333;*/
-    background-image: url("/img/banner.png");
+    background-image: url("../img/banner.png");
     background-color: #cdffd8;
     padding-top: env(safe-area-inset-top);
     height: 220px;
@@ -37,7 +37,7 @@ ul.topnav li a {
 ul.topnav li a:hover {
     background-color: rgba(205, 196, 234, 0.3);
     color: black;
-    cursor: url("/img/cursor_V1.png"), auto;
+    cursor: url("../img/cursor_V1.png"), auto;
 }
 
 /* Container gem. Aufgabe 1.7*/
